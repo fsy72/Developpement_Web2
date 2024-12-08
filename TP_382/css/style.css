@@ -1,0 +1,15 @@
+form select {
+    font-size: 21px;
+}
+p {
+    font-size: 30px;
+}
+div#parag1 {
+    display: none;
+}
+div#parag2 {
+    display: none;
+}
+div#parag3 {
+    display: none;
+}

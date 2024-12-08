@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+
+/** HEADER */
+header img {
+    width: 100%;
+}
+
+/** SECTION */
+section {
+    display: flex;
+    justify-content: center;
+}
+section > div {
+    width: 70%;
+    height: auto;
+}
+section div img {
+    width: 100%;
+    height: auto;
+}
+section div {
+    width: 80%;
+    height: auto;
+}
+section > div {
+    box-shadow: 0 3px 30px rgba(76, 76, 76, 0.194);
+    margin-top: 10px;
+    padding: 0 17px 10px 17px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+section div#active_mail {
+    display: flex;
+}
+section div#ins_admin, section div#ins_peda,section div#consul_edt, section div#consul_note {
+    display: none;
+}
+section h1 {
+    font-size: 30px;
+    color: rgb(25, 140, 182);
+    text-shadow: 3px 3px 10px rgba(170, 170, 170, 0.613);
+    margin-bottom: 10px;
+}
+section h3 {
+    font-size: 130%;
+    color: rgb(215, 100, 59);
+    margin-bottom: 50px;
+}
+section p {
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+section div.read_more {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
+section div.read_more button {
+    font-size: 17px;
+    border: 1px solid blue;
+    color: orangered;
+    background-color: white;
+    width: 130px;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+section div.read_more button:hover {
+    background-image: url("../images/image.png");
+    color: white;
+    font-weight: bold;
+    border-color: white;
+    transition: all 0.3s;
+}
+section div.read_more button:active {
+    border: 5px solid rgb(25, 140, 182);
+    transition: all 0.1s;
+}

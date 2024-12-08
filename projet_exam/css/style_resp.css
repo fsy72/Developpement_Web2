@@ -1,0 +1,11 @@
+@media(width<900px) {
+    /* section div {
+        box-shadow: 12px 12px 12px black;
+    } */
+    section > div {
+        flex-wrap: wrap;
+    }
+    section p, section div.read_more button {
+        display: none;
+    }
+}
