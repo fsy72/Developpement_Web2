@@ -8,4 +8,7 @@
     section p, section div.read_more button {
         display: none;
     }
+    section > button {
+        display: none;
+    }
 }

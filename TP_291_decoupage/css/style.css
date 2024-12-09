@@ -58,11 +58,11 @@ section {
 section div.left {
     max-width: 568px;
 }
-section div.right a {
+section div.right a, section div.clear a {
     text-decoration: none;
     color: rgb(233, 65, 4);
 }
-nav ol a:hover, section div.right a:hover {
+nav ol a:hover, section div.right a:hover, section div.clear a:hover {
     text-decoration: underline;
 }
 footer {
@@ -72,6 +72,14 @@ footer {
     color: rgb(190, 190, 190);
 }
 
+table, th, tr, td {
+    color: black;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table {
+    margin-bottom: 100px;
+}
 
 @media(max-width: 832px) {
     nav ol {

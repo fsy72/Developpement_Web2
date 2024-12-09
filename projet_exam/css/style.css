@@ -10,6 +10,7 @@ header img {
 
 /** SECTION */
 section {
+    /* position: relative; */
     display: flex;
     justify-content: center;
 }
@@ -30,6 +31,7 @@ section > div {
     margin-top: 10px;
     padding: 0 17px 10px 17px;
     border-radius: 5px;
+    /* display: none; */
     justify-content: center;
     align-items: center;
 }
@@ -38,6 +40,33 @@ section div#active_mail {
 }
 section div#ins_admin, section div#ins_peda,section div#consul_edt, section div#consul_note {
     display: none;
+}
+section > button {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    padding: 165px 0;
+    position: absolute;
+}
+section button svg {
+    width : 100px;
+    height : 50px;
+}
+section button polyline {
+    fill : none;
+    stroke : white;
+    stroke-width : 15px;
+    transition: all 0.3s;
+}
+section button#precedent {
+    left: 10px;
+}
+section button#suivant {
+    right: 10px;
+}
+section button:hover polyline {
+    stroke : rgba(13, 123, 186, 0.166);
 }
 section h1 {
     font-size: 30px;

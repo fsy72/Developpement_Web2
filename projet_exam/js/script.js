@@ -15,7 +15,21 @@ function showCurrentDiv() {
 }
 
 // Lancer le cycle d'affichage
-setInterval(showCurrentDiv, 4500);
+setInterval(showCurrentDiv, 4000);
 
 // Afficher la première div au démarrage
 showCurrentDiv();
+
+// Fonction précédent - suivant
+function showCurrentDivPrec() {
+    divs.forEach(div => div.style.display = 'none');
+    divs[currentIndex].style.display = 'flex';
+    if (currentIndex === 0) {
+        currentIndex = divs.length - 1;
+    } else {
+        currentIndex-- ;
+    }
+}
+function showCurrentDivSuiv() {
+    showCurrentDiv();
+}

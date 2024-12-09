@@ -13,7 +13,11 @@
         <img src="../images/entete.png" alt="">
     </header>
     <section>
-        <!-- <div class="precedent"></div> -->
+        <button id="precedent" onclick="showCurrentDivPrec()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
+                <polyline points="70,10 30,25 70,40"/>
+            </svg>
+        </button>
         <div class="parcours" id="active_mail">
             <div><img src="../images/activation_mail.jpg" alt=""></div>
             <div>
@@ -66,7 +70,6 @@
                 <div class="read_more"><button type="button">Lire la suite</button></div>
             </div>
         </div>
-        <!-- <div class="suivant"></div> -->
         <div class="parcours" id="consul_note">
             <div><img src="../images/consultation_note.png" alt=""></div>
             <div>
@@ -79,6 +82,11 @@
                 <div class="read_more"><button type="button">Lire la suite</button></div>
             </div>
         </div>
+        <button id="suivant" onclick="showCurrentDivSuiv()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50">
+                <polyline points="30,10 70,25 30,40"/>
+            </svg>                  
+        </button>
     </section>
     <section>
         <div></div>
