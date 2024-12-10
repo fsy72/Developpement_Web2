@@ -1,14 +1,20 @@
-@media(width<900px) {
+@media(width < 900px) {
     /* section div {
         box-shadow: 12px 12px 12px black;
     } */
-    section > div {
+    section.sect_1 > div {
         flex-wrap: wrap;
     }
-    section p, section div.read_more button {
+    section.sect_1 p, section div.read_more button {
         display: none;
     }
-    section > button {
+    section.sect_1 > button {
         display: none;
+    }
+}
+
+@media (width < 988px) {
+    section.sect_2 div.gauche {
+        width: 57%;
     }
 }

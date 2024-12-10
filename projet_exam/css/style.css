@@ -1,6 +1,41 @@
+/* var */
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --bleu-icon: #3588B2;
+    --shadow-sec: 0 3px 50px rgba(76, 76, 76, 0.194);
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+}
+
 body {
     margin: 0;
-    font-family:Arial, Helvetica, sans-serif ;
+    /* font-family:Arial, Helvetica, sans-serif ; */
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 /** HEADER */
@@ -8,40 +43,39 @@ header img {
     width: 100%;
 }
 
-/** SECTION */
-section {
-    /* position: relative; */
+/** SECTION 1*/
+section.sect_1 {
     display: flex;
     justify-content: center;
+    margin: 30px 0;
 }
-section > div {
-    width: 70%;
+section.sect_1 > div {
+    border: 1px solid rgba(128, 128, 128, 0.287);
+    width: 86%;
     height: auto;
 }
-section div img {
+section.sect_1 div img {
     width: 100%;
     height: auto;
 }
-section div {
-    width: 80%;
-    height: auto;
-}
-section > div {
-    box-shadow: 0 3px 30px rgba(76, 76, 76, 0.194);
-    margin-top: 10px;
+section.sect_1 > div {
+    box-shadow: var(--shadow-sec);
     padding: 0 17px 10px 17px;
     border-radius: 5px;
     /* display: none; */
     justify-content: center;
     align-items: center;
 }
-section div#active_mail {
+section.sect_1 > div > div {
+    width: 50%;
+}
+section.sect_1 div#active_mail {
     display: flex;
 }
-section div#ins_admin, section div#ins_peda,section div#consul_edt, section div#consul_note {
+section.sect_1 div#ins_admin, section.sect_1 div#ins_peda,section.sect_1 div#consul_edt, section.sect_1 div#consul_note {
     display: none;
 }
-section > button {
+section.sect_1 > button {
     background-color: rgba(255, 255, 255, 0);
     box-shadow: none;
     border: none;
@@ -49,46 +83,46 @@ section > button {
     padding: 165px 0;
     position: absolute;
 }
-section button svg {
+section.sect_1 button svg {
     width : 100px;
     height : 50px;
 }
-section button polyline {
+section.sect_1 button polyline {
     fill : none;
-    stroke : white;
+    stroke : none;
     stroke-width : 15px;
     transition: all 0.3s;
 }
-section button#precedent {
+section.sect_1 button#precedent {
     left: 10px;
 }
-section button#suivant {
+section.sect_1 button#suivant {
     right: 10px;
 }
-section button:hover polyline {
-    stroke : rgba(13, 123, 186, 0.166);
+section.sect_1 button:hover polyline {
+    stroke : rgba(13, 123, 186, 0.088);
 }
-section h1 {
+section.sect_1 h1 {
     font-size: 30px;
-    color: rgb(25, 140, 182);
+    color: var(--bleu-icon);
     text-shadow: 3px 3px 10px rgba(170, 170, 170, 0.613);
     margin-bottom: 10px;
 }
-section h3 {
+section.sect_1 h3 {
     font-size: 130%;
-    color: rgb(215, 100, 59);
+    color: #b25f35;
     margin-bottom: 50px;
 }
-section p {
+section.sect_1 p {
     font-size: 17px;
     margin-bottom: 50px;
 }
-section div.read_more {
+section.sect_1 div.read_more {
     display: flex;
     justify-content: center;
     justify-self: center;
 }
-section div.read_more button {
+section.sect_1 div.read_more button {
     font-size: 17px;
     border: 1px solid blue;
     color: orangered;
@@ -98,14 +132,147 @@ section div.read_more button {
     border-radius: 5px;
     cursor: pointer;
 }
-section div.read_more button:hover {
+section.sect_1 div.read_more button:hover {
     background-image: url("../images/image.png");
     color: white;
     font-weight: bold;
     border-color: white;
     transition: all 0.3s;
 }
-section div.read_more button:active {
+section.sect_1 div.read_more button:active {
     border: 5px solid rgb(25, 140, 182);
     transition: all 0.1s;
+}
+
+/** SECTION 2*/
+section.sect_2 {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    margin: 30px 0;
+}
+section.sect_2 > div {
+    width: 89%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+section.sect_2 div.gauche {
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.287);
+    width: 134%;
+    margin-right: 15px;
+    padding: 16px;
+    border-radius: 10px;
+}
+section.sect_2 div.droite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 15px;
+    gap: 0.5em;
+}
+section.sect_2 div.droite ~ div {
+    -webkit-box-flex: 0;
+    /* flex: 0 0 25%; */
+    max-width: 25%;
+}
+section.sect_2 div.droite > div > * {
+    margin: 0 0 25px;
+}
+section.sect_2 div.droite div{
+    background-color: white;
+    box-shadow: var(--shadow-sec);
+    border: 1px solid rgba(128, 128, 128, 0.287);
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    border-radius: 5px;
+}
+section.sect_2 div.gauche .header, section.sect_2 div.droite h4 {
+    font-size: 30px;
+    font-weight: bold;
+    filter: drop-shadow(2px 2px 4px rgba(30, 112, 219, .342));
+    color: var(--bleu-icon);
+}
+section.sect_2 div.droite p.lamp {
+    color: #b25f35;
+}
+section.sect_2 div.droite a {
+    background-color: #f1b33c;
+    color: white;
+    padding: 6px 13px;
+    border-radius: 5px;
+    align-self: center;
+    text-decoration: none;
+}
+button.connecter {
+    width: 210px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    background: linear-gradient(90deg, #3588b2, #f1b33c, #d8843b, #b25f35);
+    background-size: 400% 400%;
+    animation: 
+        moveBackground 10s ease infinite,
+        pulse 3s infinite alternate;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    align-self: center;
+}
+button.connecter:hover {
+    transform: scale(1.05);
+}
+
+@keyframes moveBackground {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    100% {transform: scale(1.05);}
+}
+
+/** CONTAINER VIDEO*/
+
+section.container_vd {
+    display: flex;
+    justify-content: center;
+}
+section.container_vd div{
+    width: 89%;
+}
+#bloc_video {
+    width : 100%;
+    height : 510px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sec);
+    margin-bottom: 30px;
+}
+#support {
+    position: fixed;
+    top: 30em;
+    left: 0;
+}
+#support img {
+    width: 109px;
+    height: auto;
+}
+
+/** FOOTER */
+footer {
+    color: #b25f35;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid rgba(128, 128, 128, 0.287);
 }
