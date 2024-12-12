@@ -33,3 +33,42 @@ function showCurrentDivPrec() {
 function showCurrentDivSuiv() {
     showCurrentDiv();
 }
+
+// Support
+const dialog = document.getElementById('dialog');
+const body = document.querySelector('body');
+const img = document.getElementById('img_s');
+const container = document.querySelector('.container');
+
+img.addEventListener('click', function() {
+    body.style.overflow = 'hidden';
+    dialog.style.display = 'flex';
+
+    container.classList.remove("hidden"); 
+    container.classList.add("visible");
+});
+
+
+dialog.addEventListener('click', function(event) {
+    event.stopPropagation();
+
+    body.style.overflowY = 'scroll';
+    dialog.style.transform = 'translate';
+    
+    container.classList.remove("visible");
+    container.classList.add("hiding");
+
+    // Attendre la fin de l'animation avant de masquer complètement
+    container.addEventListener("animationend", () => {
+        if (container.classList.contains("hiding")) {
+            container.classList.remove("hiding");
+            dialog.classList.add("hidden");
+            dialog.style.display = 'none';
+        }
+    }, { once: true });
+
+});
+
+container.addEventListener('click', function(event) {
+    event.stopPropagation();
+});

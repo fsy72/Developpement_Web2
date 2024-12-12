@@ -107,7 +107,7 @@
                         <i class="fa fa-lightbulb"></i>
                         Veuillez vous connecter pour accéder à votre espace privé.
                     </p>
-                    <button class="connecter">
+                    <button type="button" class="connecter" onclick="window.location.href='form_connection.html'">
                         <i class="fa fa-sign-in-alt"></i>
                         Se connecter
                     </button>
@@ -140,7 +140,9 @@
             </iframe>
         </div>
     </section>
-    <div id="support"><img src="../images/support.png" alt=""></div>
+    <div id="support">
+        <img id="img_s" type="button" src="../images/support.png" alt="" >
+    </div>
     <footer>
         <div>
             <p>
@@ -151,6 +153,24 @@
             </p>
         </div>
     </footer>
+    <div id="dialog">
+        <div class="container">
+            <div class="content">
+                <h4>
+                    <i class="fa fa-mail-bulk"></i>
+                    Contact support 
+                </h4>
+                <p>
+                    Vous pouvez aussi envoyer un e-mail à :
+                </p>
+                <span>
+                    <i class="fa fa-at"></i> 
+                    <strong>support-ccos@ugb.edu.sn</strong>
+                </span>
+                <img src="../images/img_support.jpg" alt="" >
+            </div>
+        </div>
+    </div>
     <script src="../js/script.js"></script>
 </body>
 </html>

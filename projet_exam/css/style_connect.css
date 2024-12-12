@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(../images/connection_img_2.jpg);
+    background-size: cover;
+    height: 100%;
+}
+.container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container_form {
+    background-color: rgb(255 255 255 / 70%);
+    border-radius: 15px;
+}
+#form_login {
+    padding: 27px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 341px;
+}
+#form_login div.logo img{
+    width: 140px;
+    height: auto;
+}
+a {
+    font-weight: bold;
+    color: #0088ce;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline #0088ce;
+}
+#form_login > div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+#welcome {
+    text-align: center;
+    font-family: system-ui;
+}
+#welcome h1 {
+    font-size: 24px;
+    line-height: normal;
+    color: #B5673F;
+    font-weight: 700;
+}
+.form_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.form_group label{
+    color: #3588B2;
+    font-size: 24px;
+    font-weight: 100;
+    font-family: system-ui;
+    margin-bottom: 5px;
+}
+.form_group input {
+    padding: 7px;
+    line-height: 1.66666667;
+    color: #363636;
+    background-color: #ffffff96;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+.form_group input:focus {
+    background-color: #fffffff3;
+    border-color: #0088ce;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,136,206,.6);
+    transition: all 0.3s;
+}
+.login_link {
+    font-size: 13px;
+    justify-content: space-between !important;
+    flex-direction: row;
+}
+#bouton button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10pc;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    background: linear-gradient(90deg, #3588b2, #f1b33c);
+    background-size: 200% 200%;
+    animation: moveBackground 10s ease infinite;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    align-self: center;
+}
+#bouton button:hover {
+    transform: scale(1.05);
+}
+
+/** Alert */
+
+#mdp, #mail {
+    font-weight: bold;
+    color: #dc3545;
+}
+form#form_login div#alert {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.588);
+    border: 1px solid #dc3545;
+    padding: 10px;
+    align-items: center;
+    gap: 1.3em;
+}	
+span.alert_icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border: 3px solid #dc3545;
+    border-radius: 50%; /* Cercle parfait */
+    color: #dc3545;
+    font-size: 15px; /* Taille de l'icône */
+}
