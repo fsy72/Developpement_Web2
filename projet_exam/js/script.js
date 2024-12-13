@@ -48,8 +48,7 @@ img.addEventListener('click', function() {
     container.classList.add("visible");
 });
 
-
-dialog.addEventListener('click', function(event) {
+dialog.addEventListener('click', function resp(event) {
     event.stopPropagation();
 
     body.style.overflowY = 'scroll';
@@ -62,7 +61,6 @@ dialog.addEventListener('click', function(event) {
     container.addEventListener("animationend", () => {
         if (container.classList.contains("hiding")) {
             container.classList.remove("hiding");
-            dialog.classList.add("hidden");
             dialog.style.display = 'none';
         }
     }, { once: true });

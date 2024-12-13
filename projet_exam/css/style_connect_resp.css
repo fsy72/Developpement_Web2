@@ -1,0 +1,6 @@
+@media (width < 380px) {
+    #container_form {
+        width: 100%;
+        border-radius: 0%;
+    }
+}

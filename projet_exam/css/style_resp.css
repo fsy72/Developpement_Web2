@@ -1,9 +1,7 @@
 @media(width < 900px) {
-    /* section div {
-        box-shadow: 12px 12px 12px black;
-    } */
     section.sect_1 > div {
-        flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 70%;
     }
     section.sect_1 p, section div.read_more button {
         display: none;
@@ -11,10 +9,115 @@
     section.sect_1 > button {
         display: none;
     }
+
+    /** SECTION 2*/
+    section.sect_2 > div, 
+    section.sect_2 div.gauche div.header, 
+    section.sect_2 div.droite h4 {
+        flex-wrap: wrap;
+        /* width: 74%; */
+        font-size: 130%;
+    }
+    section.sect_2 div.gauche {
+        margin-bottom: 10px;
+        max-width: 100% !important;
+        margin-right: 0;
+    }
+
+    section.sect_2 div.droite div.btn{
+        display: none;
+    }
+    section.sect_2 div.btn_resp {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 1.3em;
+        margin: 10px 0;
+        width: 100%;
+    }
+    section.sect_2 div.btn_resp button {
+        width: 76%;
+        height: 70px;
+        font-size: 1.9rem;
+    }
+    section.sect_2 div.btn_resp div.lien {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* gap: 1.3em; */
+        /* font-size: 100%; */
+    }
+    section.sect_2 div.lien a {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+    }
+    section.sect_2 div.lien div {
+        border-radius: 5px;
+        padding: 10px 0;
+        width: 49%;
+    }
+    section.sect_2 div.lien div.first {
+        background-color: #f1b33c;
+    }
+    section.sect_2 div.lien div.second {
+        background-color: #3588b2;
+        align-self: stretch;
+    }
+
+    /** SUPPORT */
+    div#dialog div.container img{
+        width: auto;
+        height: auto;
+    }
+
+    /** SECTION VIDEO */
+    /* section.container_vd {
+        width: 50%;
+    } */
 }
 
 @media (width < 988px) {
+    body {
+        overflow-y : scroll;
+    }
+    section.sect_2 > div {
+        justify-content: center;
+    }
     section.sect_2 div.gauche {
-        width: 57%;
+        max-width: 50%;
+    }
+    section.sect_2 div.droite {
+        margin: 0;
+    }
+    #support {
+        display: none;
+    }
+}
+
+/** MOBILE */
+@media (width < 460px) {
+
+    section.sect_1 h1, section.sect_1 h3 {
+        font-size: 18px;
+    }
+    section.sect_2 > div, 
+    section.sect_2 div.gauche div.header, 
+    section.sect_2 div.droite h4 {
+        font-size: 114%;
+    }
+    section.sect_2 div.gauche {
+        margin-bottom: 10px;
+        max-width: 100% !important;
+        margin-right: 0;
+    }
+    section.sect_2 div.btn_resp button {
+        width: 59%;
+        height: 57px;
+        font-size: 1.5rem;
+    }
+    section.sect_2 div.lien a {
+        font-size: 18px;
     }
 }
