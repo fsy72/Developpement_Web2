@@ -122,7 +122,7 @@ section.sect_1 div.read_more {
     justify-content: center;
     justify-self: center;
 }
-section.sect_1 div.read_more button {
+section.sect_1 div.read_more button, td.contenu button {
     font-size: 17px;
     border: 1px solid blue;
     color: orangered;
@@ -133,7 +133,7 @@ section.sect_1 div.read_more button {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-section.sect_1 div.read_more button:hover {
+section.sect_1 div.read_more button:hover, td.contenu button:hover {
     background-image: url("../images/image.png");
     color: white;
     font-weight: bold;
@@ -165,6 +165,7 @@ section.sect_2 div.gauche {
     margin-right: 15px;
     padding: 16px;
     border-radius: 10px;
+    max-height: 574px;
 }
 section.sect_2 div.droite {
     display: flex;
@@ -248,8 +249,11 @@ button.connecter:hover {
 
 section.info {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    flex-direction: column;
     margin: 30px 0;
+    max-height: 475px;
+    overflow: auto
 }
 section.info > div {
     width: 100%;
@@ -264,6 +268,33 @@ section.info div.pub_info {
     color: #0c5460;
     background-color: #d1ecf1;
     border-color: #bee5eb;
+}
+section.info div.container_info {
+    display: flex;
+}
+section.info div.container_info td img {
+    width: 86%;
+}
+td[rowspan] img{
+    width: 100%;
+}
+td[rowspan] {
+    width: 30%;
+}
+td.titre {
+    color: #b25f35;
+    font-weight: bold;
+}
+td.contenu {
+    font-size: 13px;
+}
+td.contenu div.read_more button {
+    display: block !important;
+    border-color: black;
+    font-size: 13px;
+    width: 90px;
+    height: 27px;
+    margin-top: 10px;
 }
 
 /** CONTAINER VIDEO*/

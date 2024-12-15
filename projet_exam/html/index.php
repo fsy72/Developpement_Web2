@@ -112,9 +112,32 @@
                     Informations
                 </div>
                 <section class="info">
+                    <?php
+                        require("../config.php");
+                        $connexion = connect_db();
+                        $requete = "SELECT * FROM information";
+                        $resultat = mysqli_query($connexion, $requete);
+                        if($champ = mysqli_fetch_array($resultat)) {
+                    ?>
+                    <table>
+                        <?php do {?>
+                        <tr>
+                            <td rowspan="2"><img src="<?php echo $champ['image'];?>" alt=""></td>
+                            <td  class="titre"><?php echo $champ['titre'];?>
+                        </tr>
+                        <tr>
+                            <td class="contenu">
+                                <?php echo $champ['contenu'];?>
+                                <div class="read_more"><button type="button">Lire la suite</button></div>
+                            </td>
+                        </tr>
+                    <?php }while ($champ = mysqli_fetch_array($resultat));?>
+                    </table>
+                    <?php } else { ?>
                     <div>
                         <div class="pub_info">Aucune information publiée</div>
                     </div>
+                    <?php }?>
                 </section>
             </div>
             <div class="droite">
