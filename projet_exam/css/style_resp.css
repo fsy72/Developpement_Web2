@@ -72,8 +72,13 @@
         height: auto;
     }
 
-    /** SECTION VIDEO */
-    /* td.continu */
+    /** SECTION INFORMATION */
+    td.titre {
+       font-size: 13px;
+    }
+    td.contenu {
+        font-size: 10px;
+    }
 }
 
 @media (width < 988px) {

@@ -287,6 +287,7 @@ td.titre {
 }
 td.contenu {
     font-size: 13px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.227);
 }
 td.contenu div.read_more button {
     display: block !important;
