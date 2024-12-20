@@ -1,0 +1,25 @@
+#admin_cons{
+    display: flex;
+    padding: 20px;
+    border-radius: 8px;
+    flex-direction: row;
+    min-height: calc(100vh - 120px); 
+    max-height: 450px;
+}
+
+#admin-cons section {
+    margin-bottom: 20px;
+}
+
+.Consultation.expended{
+    right: 0;
+    width: 100vw;
+}
+
+.Consultation {
+    min-height: 450px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f6f6f3;
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.1);
+  }

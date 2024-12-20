@@ -1,0 +1,359 @@
+/* MON CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh; 
+  width: 100%;v    
+  flex-direction: column;
+  background-color: #ebebeb;
+}
+
+.main-container {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+.sidebar ul li {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar ul li i {
+  color: #b44e1d; /* Couleur des icônes et des textes non actifs */
+}
+
+.sidebar ul li a {
+  color: #b44e1d; /* Couleur du lien non actif */
+  text-decoration: none !important;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background-color: #ebebeb;
+  color: #257380;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.sidebar ul li:hover i,
+.sidebar ul li.active i {
+  color: #257380; /* Couleur des icônes sur hover ou actif */
+}
+
+.sidebar ul li:hover a,
+.sidebar ul li.active a {
+  color: #257380; /* Couleur du texte du lien sur hover ou actif */
+}
+
+  
+/* Bouton Menu */
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+/* Contenu Principal */
+.content {
+  flex: 1;
+  margin-left: 250px; 
+  width: calc(100% - 250px);
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+  overflow-y: auto; 
+}
+
+.content.expanded {
+  margin-left: 0;
+  width: 100%;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  background-color: #fbfbfb;
+  color: white;
+  overflow-y: auto;
+  transform: translateX(0); 
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  border-bottom-right-radius: 8px;
+  
+}
+  
+.header {
+ position:fixed;
+  top: 0;
+  width: calc(100vw - 256px);  
+  background-color: #b75f21;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: .9375rem;
+  font-weight: 400;
+
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  z-index: 1000; /* Assure que le header est au-dessus du contenu */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+/* Header quand la barre latérale est masquée */
+.header.expended{
+    right: 0;
+    width: 100vw;
+}
+
+
+/* Contenu Principal */
+.content {
+  margin-top: 60px; 
+  margin-left: 250px; 
+  width: calc(100% - 250px); 
+  overflow-y: auto;
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+body::-webkit-scrollbar {
+  display: none; 
+}
+
+.profile {
+  position: absolute;
+  right:0;
+}
+
+.profile span {
+  cursor: pointer;
+}
+
+#dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  z-index: 10;
+}
+
+#dropdown-menu li {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#dropdown-menu li:hover {
+  background: #f0f0f0;
+}
+
+
+.main-container {
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Cartes */
+.cards {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px;
+}
+
+
+.card {
+  padding-block: 15px;
+  width: 23%;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+  box-shadow:0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19); /* Shadow par défaut */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation smooth */
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Animation au clic */
+.card:hover {
+  transform: scale(0.95); 
+  
+}
+
+/* Couleur de shadow personnalisée pour chaque carte */
+.card.blue:hover {
+  box-shadow: 0px 16px 25px rgba(31, 68, 110, 0.7); 
+}
+
+.card.orange:hover {
+  box-shadow: 0px 8px 20px rgba(232, 126, 4, 0.7); 
+}
+
+.card.consult_note:hover {
+  box-shadow: 0px 8px 16px rgba(48, 124, 162, 0.7); 
+}
+
+.card.aide:hover {
+  box-shadow: 0px 8px 16px rgba(169, 89, 48, 0.7); 
+}
+
+
+.card.blue {
+  background-color: #1f446e;
+  color: #fff;
+  border-radius: 20px !important;
+}
+
+.card.orange {
+  background-color: #e87e04;
+  border-radius: 20px !important;
+}
+
+.card.consult_note {
+  background-color: #307ca2;
+  color: #fff;
+  border-radius: 20px !important;
+}
+
+.card.aide {
+  background-color: #a95930;
+  color: #fff;
+  border-radius: 20px !important;
+}
+
+.card i {
+  font-size: 6rem;
+  margin-bottom: 10px;
+  color: #f0f0f0;
+}
+
+
+.info-aside-container {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+}
+
+
+.info {
+  flex: 90%;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f0f8ff;
+}
+
+.info h4 {
+  font-size: 30px;
+  -webkit-filter: drop-shadow(2px 2px 4px rgba(30, 112, 219, 0.342));
+  filter: drop-shadow(2px 2px 4px rgba(30, 112, 219, 0.342));
+  color: #3588b2 !important;
+}
+
+.alert-info,
+.alert-cand {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  text-align: center;
+}
+
+
+.candidatures {
+  flex: 10%;
+  padding: 20px;
+  background-color: #fdf8f3;
+  border: 1px solid #f0e0d0;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.candidatures h4 {
+  font-size: 30px;
+  -webkit-filter: drop-shadow(2px 2px 4px rgba(30, 112, 219, 0.342));
+  filter: drop-shadow(2px 2px 4px rgba(30, 112, 219, 0.342));
+  color: #3588b2 !important;
+}
+
+.candidatures .empty-state {
+  text-align: center;
+  color: #888;
+}
+
+.info-aside-container,
+.info,
+.candidatures {
+  min-height: calc(100vh - 120px);
+}
+
+/* My Footer koi */
+.footer {
+  
+  background-color:white ;
+  color: #b44e1d;
+  padding: 15px;
+  text-align: center;
+  margin-left: 15px;
+  height: 60px;
+  bottom: 0 !important;
+  flex-shrink: 0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:0 2px 5px rgba(0, 0, 0, 0.1) ;
+  border-top-left-radius: 8px;
+}
+
+
+.info,
+.candidatures {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+.logo img {
+  max-width: 90%; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+ 
+}

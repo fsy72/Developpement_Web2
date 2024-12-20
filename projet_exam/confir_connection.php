@@ -48,7 +48,7 @@
             if($etudiant_a['libelle_role']=="Administrateur")
                 header("Location: part_admin.php?name= $name");
             else
-                header("Location: teste_link.php?name= $name"); 
+                header("Location: portail.php?name= $name"); 
         }
         
     }

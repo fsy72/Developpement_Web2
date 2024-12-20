@@ -92,7 +92,7 @@
     <section class="sect_2">
         <div>
             <div class="btn_resp">
-                <button type="button" class="connecter" onclick="window.location.href='form_connection.html'">
+                <button type="button" class="connecter" onclick="window.location.href='php_form/form_connection.php'">
                     <i class="fa fa-sign-in-alt"></i>
                     Se connecter
                 </button>
@@ -150,7 +150,7 @@
                         <i class="fa fa-lightbulb"></i>
                         Veuillez vous connecter pour accéder à votre espace privé.
                     </p>
-                    <button type="button" class="connecter" onclick="window.location.href='./php_form/form_connection.php'">
+                    <button type="button" class="connecter" onclick="window.location.href='php_form/form_connection.php'">
                         <i class="fa fa-sign-in-alt"></i>
                         Se connecter
                     </button>

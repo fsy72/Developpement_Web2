@@ -10,10 +10,6 @@
     <header>
         <div>
             |||
-            <?php
-                $name = $_GET['name'];
-                echo $name;
-            ?>
         </div>
         <div class="ad">
             <div>Administration</div>
@@ -86,7 +82,7 @@
                         </tr>
                         <?php do {?>
                         <tr>
-                            <td><a href="php_form/form_modifie_etu.php?id_etudiant= <?php echo $champs['id_etudiant'];?>">Modifier</a></td>
+                            <td><a href="php_form/form_modifie_etu.php?id_etudiant=<?php echo $champs['id_etudiant'];?>">Modifier</a></td>
                             <td rowspan="2"><?php echo $champs['code_etudiant'];?></td>
                             <td rowspan="2"><?php echo $champs['prenom'];?></td>
                             <td rowspan="2"><?php echo $champs['nom'];?></td>
@@ -96,7 +92,7 @@
                             <td rowspan="2"><?php echo $champs['adresse'];?></td>
                         </tr>
                         <tr class="separe">
-                            <td><a href="php_supp/supprimer_etu.php?id_etudiant= <?php echo $champs['id_etudiant'];?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette information ?')">Supprimer</a></td>
+                            <td><a href="php_supp/supprimer_etu.php?id_etudiant=<?php echo $champs['id_etudiant'];?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette information ?')">Supprimer</a></td>
                         </tr>
                     <?php }while ($champs = mysqli_fetch_array($resultat));?>
                     </table>
