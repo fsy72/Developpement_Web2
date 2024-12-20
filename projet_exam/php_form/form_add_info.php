@@ -10,7 +10,7 @@
     <section>
         <fieldset>
             <legend>Formulaire Ajout Information</legend>
-            <form action="../ajout_info.php" method="post" enctype="multipart/form-data">
+            <form action="../php_ajout/ajout_info.php" method="post" enctype="multipart/form-data">
                 <div>
                     <label for="titre">Titre</label><br>
                     <textarea required id="titre" name="titre"></textarea>

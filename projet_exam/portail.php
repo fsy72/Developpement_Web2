@@ -48,7 +48,7 @@
                 ?>
               <i style="padding-right: 15px;" class="fas fa-caret-down"></i></span>
               <ul id="dropdown-menu" class="hidden">
-                  <li style="color:#b75f21" ><i class="fas fa-sign-out-alt"></i> Se déconnecter</li>
+                  <li style="color:#b75f21" ><i class="fas fa-sign-out-alt"></i> <a style="color:#b75f21" href="./php_form/form_connection.php">Se déconnecter</a></li>
                   <li style="color:#b75f21" ><i class="fas fa-user-cog"></i> Profil</li>
               </ul>
           </div>

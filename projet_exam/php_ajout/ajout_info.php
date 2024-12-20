@@ -1,5 +1,5 @@
 <?php
-    require("config.php");
+    require("../config.php");
     $connexion = connect_db();
 
     // Récupérer les données envoyées par le formulaire
@@ -17,7 +17,7 @@
         $file_extension = pathinfo($_FILES["image_file"]["name"], PATHINFO_EXTENSION);
         $new_image_name = $file_basename . '_' . date("Ymd_His") . '.' . $file_extension;
         
-        $target_directory = "img_info/";
+        $target_directory = "../img_info/";
         $target_path = $target_directory . $new_image_name;
         
         if (!move_uploaded_file($_FILES["image_file"]["tmp_name"], $target_path)) {
