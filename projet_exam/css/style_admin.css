@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    /* font-family:Arial, Helvetica, sans-serif ; */
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+/** HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #b25f35;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+header div.ad {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 45px;
+    gap: 1.3rem;
+}
+header div img {
+    width: 13%;
+}
+
+/** DIV container */
+div.container {
+    display: flex;
+    /* justify-content: space-between; */
+}
+div.container nav.champs {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    min-width: 18%;
+    margin: 0 5px;
+}
+/* div.container nav.champs > div {
+    border-bottom: 1px solid gray;
+} */
+div.container nav.champs button {
+    text-align: start;
+    font-size: 17px;
+    border: none;
+    color: #b25f35;
+    background-color: white;
+    width: 100%;
+    padding: 15px;
+    cursor: pointer;
+}
+div.container nav.champs button.active {
+    color: white;
+    background: linear-gradient(90deg, #b25f35, #f1b33c, #fff);
+    border-radius: 1pc 0 0 1pc;
+    /* transition: all 1.3s; */
+}
+div.container section.content > div {
+    width: 100% !important;
+}
+
+/** Information */
+#info {
+    display: block;
+    width: 47%;
+}
+#form, #etu, #niv, #an {
+    display: none;
+}
+section.content > div a {
+    text-decoration: none;
+    color: #3e3eca;
+    border: 1px solid #99e3ef;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 0 10px;
+    margin: 0 5px;
+}
+section.content > div a:hover {
+    text-decoration: underline;
+    background-color: #99e3ef;
+    color: white;
+}
+section.content div.liste {
+    max-height: 475px;
+    overflow-y: scroll;
+    margin: 15px 0;
+}
+div.pub_info {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    text-align: center;
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+#info td[rowspan] img{
+    width: 100%;
+}
+#info td[rowspan] {
+    width: 30%;
+}
+#info td.titre {
+    color: #b25f35;
+    font-weight: bold;
+}
+#info td.contenu {
+    font-size: 13px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.227);
+}
+#info td.contenu div.read_more {
+    text-decoration: none;
+    font-size: 13px;
+    margin: 19px;
+}
+/* td.contenu div.read_more a {
+    text-decoration: none;
+    font-size: 13px;
+    margin: 0 5px;
+}
+td.contenu div.read_more a:hover {
+    text-decoration: underline;
+} */
+
+/** ETUDIANT && FORMATION */
+section.content div.tableau table {
+    font-size: 15px;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+section.content div.tableau td.header {
+    background-color: #b25f35;
+    color: white;
+    border: 1px solid #fff;
+}
+section.content div.tableau td[rowspan] {
+    border: 1px solid #b25f35;
+}
+section.content div.tableau tr.separe {
+    border-bottom: 1px solid #b25f35;
+}
+
+/** FORMATION */

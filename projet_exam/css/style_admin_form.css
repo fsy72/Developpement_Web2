@@ -1,0 +1,39 @@
+body {
+    background-color: ghostwhite;
+}
+section {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+fieldset {
+    /* display: flex;
+    justify-content: center; */
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
+    -10px -10px 10px white;
+    min-width: 30%;
+}
+fieldset form {
+    font-size: 21px;
+}
+input[type="file"] {
+    border: 1px solid #007bff;
+    border-radius: 5px;
+}
+input[type="submit"], input[type="file"]::file-selector-button {
+    font-size: 15px;
+    padding: 5px 10px;
+    background-color: #007bffa0;
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #007bff;
+}
+fieldset div{
+    margin-bottom: 10px;
+}

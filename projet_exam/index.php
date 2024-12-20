@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portail</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/style_resp.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_resp.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <!-- <img src="https://portail.ugbnumerique.sn/assets/images/pse/entete_pse_10@2x.png" alt=""> -->
-        <img src="../images/entete.png" alt="">
+        <img src="images/entete.png" alt="">
     </header>
     <section class="sect_1">
         <button id="precedent" onclick="showCurrentDivPrec()">
@@ -20,7 +20,7 @@
             </svg>
         </button>
         <div class="parcours" id="active_mail">
-            <div><img src="../images/activation_mail.jpg" alt=""></div>
+            <div><img src="images/activation_mail.jpg" alt=""></div>
             <div>
                 <h1>Activation de l'adresse email institutionnell</h1>
                 <h3>En quelques clics, activez vous-même votre email UGB!</h3>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="parcours" id="ins_admin">
-            <div><img src="../images/Inscription_admin.png" alt=""></div>
+            <div><img src="images/Inscription_admin.png" alt=""></div>
             <div>
                 <h1>Préinscription administrative</h1>
                 <h3>Fini les va-et-vient et les longues files d'attente pour vous inscrire. Faites votre préinscription en ligne!</h3>
@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="parcours" id="ins_peda">
-            <div><img src="../images/Inscription_péda.png" alt=""></div>
+            <div><img src="images/Inscription_péda.png" alt=""></div>
             <div>
                 <h1>Inscription pédagogique en ligne</h1>
                 <h3>Faites votre inscription pédagogique sans faire la queue ni vous déplacer!</h3>
@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="parcours" id="consul_edt">
-            <div><img src="../images/consultation_edt.png" alt=""></div>
+            <div><img src="images/consultation_edt.png" alt=""></div>
             <div>
                 <h1>Consultation des Emplois du temps</h1>
                 <h3>Recevez et téléchargez en temps réel votre emplois du temps</h3>
@@ -72,7 +72,7 @@
             </div>
         </div>
         <div class="parcours" id="consul_note">
-            <div><img src="../images/consultation_note.png" alt=""></div>
+            <div><img src="images/consultation_note.png" alt=""></div>
             <div>
                 <h1>Consultation des notes</h1>
                 <h3>En toute confidentialité, consultez vos différentes notes et faites vos réclamations!</h3>
@@ -113,7 +113,7 @@
                 </div>
                 <section class="info">
                     <?php
-                        require("../config.php");
+                        require("config.php");
                         $connexion = connect_db();
                         $requete = "SELECT * FROM information";
                         $resultat = mysqli_query($connexion, $requete);
@@ -122,7 +122,7 @@
                     <table>
                         <?php do {?>
                         <tr>
-                            <td rowspan="2"><img src="<?php echo $champ['image'];?>" alt=""></td>
+                            <td rowspan="2"><img src="img_info/<?php echo $champ['image'];?>" alt=""></td>
                             <td  class="titre"><?php echo $champ['titre'];?>
                         </tr>
                         <tr>
@@ -150,7 +150,7 @@
                         <i class="fa fa-lightbulb"></i>
                         Veuillez vous connecter pour accéder à votre espace privé.
                     </p>
-                    <button type="button" class="connecter" onclick="window.location.href='form_connection.html'">
+                    <button type="button" class="connecter" onclick="window.location.href='./php_form/form_connection.php'">
                         <i class="fa fa-sign-in-alt"></i>
                         Se connecter
                     </button>
@@ -184,7 +184,7 @@
         </div>
     </section>
     <div id="support">
-        <img id="img_s" type="button" src="../images/support.png" alt="" >
+        <img id="img_s" type="button" src="images/support.png" alt="" >
     </div>
     <footer>
         <div>
@@ -210,10 +210,10 @@
                     <i class="fa fa-at"></i> 
                     <strong>support-ccos@ugb.edu.sn</strong>
                 </span>
-                <img src="../images/img_support.jpg" alt="" >
+                <img src="images/img_support.jpg" alt="" >
             </div>
         </div>
     </div>
-    <script src="../js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -3,8 +3,8 @@
     $connexion = connect_db();
 
     // Récupérer les données envoyées par le formulaire
-    $mdp = $_POST['password'] ?? '';
-    $mail = $_POST['username'] ?? '';
+    $mdp = addslashes($_POST['password']);
+    $mail = addslashes($_POST['username']);
 
     // Vérification des entrées
     if (empty($mdp) || empty($mail)) {
@@ -24,17 +24,36 @@
     $requete = "SELECT * FROM user WHERE email = '$mail' AND password = '$mdp'";
     $resultat = mysqli_query($connexion, $requete);
 
+
     // Vérification des résultats
     if (!$resultat) {
         die("Erreur dans la requête : " . mysqli_error($connexion));
     }
 
+    $requete_a = 
+        "SELECT r.libelle_role 
+        FROM user u, role r
+        WHERE u.email = '$mail' 
+        AND u.password = '$mdp' 
+        AND u.id_role = r.id_role";
+    $resultat_a = mysqli_query($connexion, $requete_a);
+
+    if (!$resultat_a) {
+        die("Erreur dans la requête : " . mysqli_error($connexion));
+    }
+
     if ($etudiant = mysqli_fetch_assoc($resultat)) {
         $name = $etudiant['name'];
-        header("Location: teste_link.php?name= $name");
+        if ($etudiant_a = mysqli_fetch_assoc($resultat_a)) {
+            if($etudiant_a['libelle_role']=="Administrateur")
+                header("Location: part_admin.php?name= $name");
+            else
+                header("Location: teste_link.php?name= $name"); 
+        }
+        
     }
     else {
-        header("Location: ./html/form_connection.html?username=" . urlencode($mail)); 
+        header("Location: ./php_form/form_connection.php?username=" . urlencode($mail)); 
     }
 
     // Fermer la connexion
